@@ -1,0 +1,166 @@
+﻿<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-29 10:40:41
+ * @LastEditTime: 2019-09-01 11:29:58
+ * @LastEditors: Please set LastEditors
+ -->
+<!--_meta 作为公共模版分离出去-->
+{include file="public/_meta"/}
+<!--/meta 作为公共模版分离出去-->
+
+<title>car 后台管理系统</title>
+
+</head>
+
+<body>
+
+	<!--_menu 作为公共模版分离出去-->
+	<aside class="Hui-admin-aside-wrapper">
+		<div class="Hui-admin-logo-wrapper">
+			<a class="logo navbar-logo" href="javascript:;">
+				<i class="va-m iconpic global-logo"></i>
+				<span class="va-m">Car 后台管理系统</span>
+			</a>
+		</div>
+		<div class="Hui-admin-menu-dropdown bk_2">
+
+			<dl id="menu-admin" class="Hui-menu">
+				<dt class="Hui-menu-title"> 管理员管理</dt>
+				<dd class="Hui-menu-item">
+					<ul>
+						<li><a data-href="{:url('Houtaigroup/index')}" data-title="角色管理 后台用户组"
+								href="javascript:void(0)">角色管理 后台用户组</a></li>
+						<li><a data-href="{:url('Houtaimenu/index')}" data-title="权限管理"
+								href="javascript:void(0)">权限管理</a>
+						</li>
+						<li><a data-href="{:url('Adminuser/index')}" data-title="管理员列表"
+								href="javascript:void(0)">管理员列表</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="menu-admin" class="Hui-menu">
+				<dt class="Hui-menu-title">车检站信息管理</dt>
+				<dd class="Hui-menu-item">
+					<ul>
+						<li><a data-href="{:url('projecttype/index')}" data-title="车检分类"
+								href="javascript:void(0)">车检分类</a></li>
+						<li><a data-href="{:url('company/index')}" data-title="车检机构" href="javascript:void(0)">车检机构</a>
+						</li>
+						<li><a data-href="{:url('Carleixing/index')}" data-title="车辆类型"
+								href="javascript:void(0)">车辆类型</a></li>
+						<li><a data-href="{:url('Carzuowei/index')}" data-title="车辆座位"
+								href="javascript:void(0)">车辆座位</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="menu-admin" class="Hui-menu">
+				<dt class="Hui-menu-title"> 前台用户管理</dt>
+				<dd class="Hui-menu-item">
+					<ul>
+						<li><a data-href="{:url('Frontgroup/index')}" data-title="前台用户组"
+								href="javascript:void(0)">前台用户组</a></li>
+						
+						<li><a data-href="{:url('Frontuser/index')}" data-title="前台用户"
+								href="javascript:void(0)">前台用户</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</aside>
+	<div class="Hui-admin-aside-mask"></div>
+	<!--/_menu 作为公共模版分离出去-->
+
+	<div class="Hui-admin-dislpayArrow">
+		<a href="javascript:void(0);" onClick="displaynavbar(this)">
+			<i class="Hui-iconfont Hui-iconfont-left">&#xe6d4;</i>
+			<i class="Hui-iconfont Hui-iconfont-right">&#xe6d7;</i>
+		</a>
+	</div>
+
+	<section class="Hui-admin-article-wrapper">
+		<!--_header 作为公共模版分离出去-->
+		<header class="Hui-navbar">
+			<div class="navbar">
+				<div class="container-fluid clearfix">
+
+					<nav id="Hui-userbar" class="nav navbar-nav navbar-userbar">
+						<ul class="clearfix">
+							<li>欢迎</li>
+							<li class="dropDown dropDown_hover"> <a href="#" class="dropDown_A">{$info['user_name']} <i
+										class="Hui-iconfont">&#xe6d5;</i></a>
+
+								<ul class="dropDown-menu menu radius box-shadow">
+									<li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
+									<li><a href="{:url('Index/logOut')}">退出</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!--/_header 作为公共模版分离出去-->
+
+		<div id="Hui-admin-tabNav" class="Hui-admin-tabNav">
+			<div class="Hui-admin-tabNav-wp">
+				<ul id="min_title_list" class="acrossTab clearfix" style="width: 241px; left: 0px;">
+					<li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>
+				</ul>
+			</div>
+			<div class="Hui-admin-tabNav-more btn-group" style="display: none;">
+				<a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i
+						class="Hui-iconfont">&#xe6d4;</i></a>
+				<a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i
+						class="Hui-iconfont">&#xe6d7;</i></a>
+			</div>
+		</div>
+
+		<div id="iframe_box" class="Hui-admin-article">
+			<div class="show_iframe">
+				<iframe id="iframe-welcome" data-scrolltop="0" scrolling="yes" frameborder="0"
+					src="welcome.html"></iframe>
+			</div>
+		</div>
+	</section>
+	<div class="contextMenu" id="Huiadminmenu">
+		<ul>
+			<li id="closethis">关闭当前 </li>
+			<li id="closeall">关闭全部 </li>
+		</ul>
+	</div>
+	<!--_footer 作为公共模版分离出去-->
+	{include file="public/_footer"/}
+	<!--/_footer /作为公共模版分离出去-->
+
+	<!--请在下方写此页面业务相关的脚本-->
+	<script type="text/javascript" src="__ADMIN__static/business/js/main.js"></script>
+	<script>
+		function myselfinfo() {
+
+
+
+			layer.open({
+
+				type: 1,
+
+				area: ['300px', '200px'],
+
+				fix: false, //不固定
+
+				maxmin: true,
+
+				shade: 0.4,
+
+				title: '查看信息',
+
+				content: "<div>管理员信息</div><div>用户名：{$info['user_name']}</div><div>电话:{$info['mobile'] ?? '无 <a>设置</a>'}</div><div><div>ip:{$info['login_ip']}</div>"
+
+			});
+
+		}
+	</script>
+</body>
+
+</html>

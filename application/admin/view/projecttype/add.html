@@ -1,0 +1,71 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-29 14:02:27
+ * @LastEditTime: 2019-08-29 16:34:51
+ * @LastEditors: Please set LastEditors
+ -->
+<!--_meta 作为公共模版分离出去-->
+{include file="public/_meta"/}
+<!--/meta 作为公共模版分离出去-->
+<link href="__ADMIN__lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="wap-container">
+		<nav class="breadcrumb" style="background-color:#fff;padding: 0 24px">
+			首页
+			<span class="c-gray en">/</span>
+			产品管理
+			<span class="c-gray en">/</span>
+			新增产品
+			<a class="btn btn-success radius f-r" style="line-height:1.6em;margin-top:3px"
+				href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+		</nav>
+		<article class="Hui-admin-content clearfix">
+			<div class="panel">
+				<div class="panel-body">
+					<form action="javascript:;" method="post" class="form form-horizontal layui-form" id="form-article-add">
+						<div class="row clearfix">
+							<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类标题：</label>
+							<div class="form-controls col-xs-8 col-sm-9">
+								<input type="text" class="input-text" value="" placeholder="" id=""
+									name="projecttype_name">
+							</div>
+						</div>
+						<div class="row clearfix">
+							<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类描述：</label>
+							<div class="form-controls col-xs-8 col-sm-9">
+								<textarea type="text" maxlength="200" class="input-text" value=""
+									style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 355px;height: 100px;padding: 10px; resize: none;"
+									placeholder="添加描述最多100汉字" id="" name="prorojecttype_describe"></textarea>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+								<button  lay-submit lay-filter="tijiao" class="btn btn-primary radius" type="submit">提交</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</article>
+	</div>
+	<!--_footer 作为公共模版分离出去-->
+	{include file="public/_footer"/}
+
+	<!--/_footer /作为公共模版分离出去-->
+
+	<!--请在下方写此页面业务相关的脚本-->
+	<script type="text/javascript" src="__ADMIN__lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+	<script type="text/javascript" src="__ADMIN__lib/jquery.validation/1.14.0/validate-methods.js"></script>
+	<script type="text/javascript" src="__ADMIN__lib/jquery.validation/1.14.0/messages_zh.js"></script>
+	<script type="text/javascript" src="__ADMIN__lib/ueditor/1.4.3/ueditor.config.js"></script>
+	<script type="text/javascript" src="__ADMIN__lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+	<script type="text/javascript" src="__ADMIN__lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+	<script>
+		
+	</script>
+</body>
+
+</html>
